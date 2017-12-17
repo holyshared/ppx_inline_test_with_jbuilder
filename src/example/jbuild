@@ -1,0 +1,8 @@
+(jbuild_version 1)
+
+(library (
+  (public_name example.example1)
+  (name example_example1)
+  (library_flags -linkall)
+  (preprocess (pps (ppx_jane ppx_driver.runner)))
+))
