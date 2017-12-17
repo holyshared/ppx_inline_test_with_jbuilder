@@ -1,6 +1,6 @@
-B ../../_build/default/src/example
-FLG -open Example_example1 -w -40
-FLG -ppx '/home/develop/project/_build/default/.ppx/ppx_jane+ppx_driver.runner/ppx.exe --as-ppx --cookie '\''library-name="example_example1"'\'''
+B ../_build/default/src/example
+B ../_build/default/test
+FLG -w -40 -open Example_all -w -40
 PKG base
 PKG base.caml
 PKG base.shadow_stdlib
@@ -16,9 +16,12 @@ PKG ppx_expect.common
 PKG ppx_expect.config
 PKG ppx_hash.runtime-lib
 PKG ppx_inline_test.config
+PKG ppx_inline_test.runner.lib
 PKG ppx_inline_test.runtime-lib
 PKG sexplib
 PKG sexplib.0
 PKG typerep
 PKG unix
 PKG variantslib
+S .
+S ../src/example
